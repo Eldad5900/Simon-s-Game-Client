@@ -44,7 +44,7 @@ export const GamePlate = () => {
         .catch((e) => {
           console.log(e);
         });
-      setHigheScore(highes.score);
+      setHigheScore(play.score);
     } else {
       return console.log("next");
     }
