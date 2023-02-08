@@ -10,9 +10,9 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="title">
-        <section class="wrapper">
-          <div class="top">Semon's Game</div>
-          <div class="bottom" aria-hidden="true">
+        <section className="wrapper">
+          <div className="top">Semon's Game</div>
+          <div className="bottom" aria-hidden="true">
             Semon's Game
           </div>
         </section>

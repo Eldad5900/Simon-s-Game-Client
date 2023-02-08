@@ -148,7 +148,7 @@ export const GamePlate = () => {
           <div className="cardWrapper">
             {colorList &&
               colorList.map((v, i) => (
-                <ColorCard flash={flashColor === v} color={v} onClick={() => {cardClickHandle(v);}}></ColorCard>
+                <ColorCard key={v} flash={flashColor === v} color={v} onClick={() => {cardClickHandle(v);}}></ColorCard>
               ))}
           </div>
 
