@@ -1,6 +1,6 @@
 import "./gamePlate.scss";
 import { useState, useEffect } from "react";
-import ColorCard from "../ColorCard/colorCard";
+import ColorCard from "../ColorCard/colorCard.tsx";
 import timeout from "../../utils/util";
 import { UserService } from "../../sevices/gameService/gameService";
 
@@ -21,7 +21,7 @@ export const GamePlate = () => {
   const [play, setPlay] = useState(initPlay);
   const [flashColor, setFlashColor] = useState("");
 
-  function startHandle() {
+  const startHandle = () => {
     setIsOn(true);
   }
 
@@ -148,13 +148,7 @@ export const GamePlate = () => {
           <div className="cardWrapper">
             {colorList &&
               colorList.map((v, i) => (
-                <ColorCard
-                  onClick={() => {
-                    cardClickHandle(v);
-                  }}
-                  flash={flashColor === v}
-                  color={v}
-                ></ColorCard>
+                <ColorCard flash={flashColor === v} color={v} onClick={() => {cardClickHandle(v);}}></ColorCard>
               ))}
           </div>
 
